@@ -18,4 +18,10 @@ python3 unassigned_songs_tracker.py
 ## 2.) <SCREENSHOT>
 
 ## 3.) Documetnation:
-...
+https://developer.spotify.com/documentation/web-api/concepts/scopes
+https://developer.spotify.com/documentation/web-api/reference/add-items-to-playlist
+https://developer.spotify.com/documentation/web-api/reference/create-playlist
+https://developer.spotify.com/documentation/web-api/reference/get-playlists-items
+https://developer.spotify.com/documentation/web-api/reference/get-a-list-of-current-users-playlists
+https://developer.spotify.com/documentation/web-api/reference/get-users-saved-tracks
+https://developer.spotify.com/documentation/web-api
