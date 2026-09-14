@@ -218,28 +218,27 @@ def get_playlist_track_ids(sp, playlist_id):
 
 # Create playlist
 
-def create_not_sorted_playlist(sp, user_id):
+def create_not_sorted_playlist(sp):
     timestamp = datetime.now().strftime(
         "%Y-%m-%d_%H-%M-%S"
     )
 
-    playlist_name = (
-        f"Not Sorted {timestamp}"
-    )
+    playlist_name = f"Not Sorted {timestamp}"
 
-    playlist = spotify_request(
-        sp.user_playlist_create,
-        user=user_id,
-        name=playlist_name,
-        public=False,
-        collaborative=False,
-        description=(
-            "Liked homeless tracks"
+    data = {
+        "name": playlist_name,
+        "public": False,
+        "collaborative": False,
+        "description": (
+            "Liked homeless songs"
         ),
+    }
+    playlist = spotify_request(
+        sp._post,
+        "me/playlists",
+        payload=data,
     )
-
     return playlist
-
 
 def add_tracks_to_playlist(sp, playlist_id, tracks):
 #(MAX 100 songs per upload)
@@ -356,10 +355,7 @@ def main():
 # Create playlist
     print("Creating Not Sorted playlist...")
 
-    new_playlist = create_not_sorted_playlist(
-        sp,
-        user_id,
-    )
+    new_playlist = create_not_sorted_playlist(sp)
 
     print(
         f"Created: {new_playlist['name']}"
