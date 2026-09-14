@@ -11,8 +11,9 @@ SPOTIFY_CLIENT_ID=CLIENT_ID
 SPOTIFY_CLIENT_SECRET=CLIENT_SECRET
 SPOTIFY_REDIRECT_URI=http://127.0.0.1:8888/callback
 
-After that download unassigned_songs_finder.py
-It is ready to run
+After that download unassigned_songs_tracker.py
+It is ready to run:
+python3 unassigned_songs_tracker.py
 
 ## 2.) <SCREENSHOT>
 
